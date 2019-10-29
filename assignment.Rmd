@@ -1,0 +1,37 @@
+---
+title: "R Notebook"
+output: github_document
+---
+
+```{r}
+library(tidyverse)
+
+table1
+table2
+table3
+table4a
+table4b
+
+table1 %>% 
+  mutate(rate = cases / population * 10000)
+
+table1 %>% 
+  count(year, wt = cases)
+
+library(ggplot2)
+ggplot(table1, aes(year, cases)) + 
+  geom_line(aes(group = country), colour = "grey50") + 
+  geom_point(aes(colour = country))
+
+```
+
+
+1.  In table 1 variables are the columns and observations are organized by country and year.In table two it can be further subdivided by cases and population. table 3 has countries with observations by year and rate. Table four makes year a variable. has country and years as variables, with population listed beneath. The mutated tables split everything up nicely. 
+2.
+  1.  
+  2.  
+  3.  
+  4.  
+3.  
+
+
